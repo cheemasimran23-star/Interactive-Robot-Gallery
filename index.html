@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="An interactive and keyboard-accessible gallery of six futuristic robot designs.">
+  <title>Robot Gallery | Interactive Showcase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body onload="addTabindex()">
+  <header class="site-header">
+    <p class="eyebrow">Interactive robotics showcase</p>
+    <h1>Robot Gallery</h1>
+    <p class="intro">Explore six futuristic robotic designs. Hover over an image or use the Tab key to preview it.</p>
+  </header>
+  <main>
+    <section class="preview-section" aria-labelledby="preview-heading">
+      <h2 id="preview-heading">Featured robot</h2>
+      <div id="image" class="display" role="status" aria-live="polite">Hover over or focus on a robot photograph to display it here.</div>
+    </section>
+    <section class="gallery-section" aria-labelledby="gallery-heading">
+      <h2 id="gallery-heading">Explore the collection</h2>
+      <div class="gallery">
+        <figure onfocus="upDate(this)" onblur="undo()">
+          <img src="images/robot-1.jpg" alt="Black and silver humanoid robot with glowing amber eyes and fine gold detailing" onmouseover="upDate(this)" onmouseleave="undo()">
+          <figcaption>Amber-eyed humanoid</figcaption>
+        </figure>
+        <figure onfocus="upDate(this)" onblur="undo()">
+          <img src="images/robot-2.jpg" alt="Silver futuristic robot with illuminated orange eyes standing against a blurred city background" onmouseover="upDate(this)" onmouseleave="undo()">
+          <figcaption>Urban silver android</figcaption>
+        </figure>
+        <figure onfocus="upDate(this)" onblur="undo()">
+          <img src="images/robot-3.jpg" alt="Side profile of a polished silver humanoid robot with a circular mechanical ear and camera-like eye" onmouseover="upDate(this)" onmouseleave="undo()">
+          <figcaption>Silver thinking machine</figcaption>
+        </figure>
+        <figure onfocus="upDate(this)" onblur="undo()">
+          <img src="images/robot-4.jpg" alt="Orange and dark metallic robot with bright blue eyes and detailed mechanical armour" onmouseover="upDate(this)" onmouseleave="undo()">
+          <figcaption>Orange armoured robot</figcaption>
+        </figure>
+        <figure onfocus="upDate(this)" onblur="undo()">
+          <img src="images/robot-5.jpg" alt="Tall red and black angular mecha robot with layered armour and small illuminated details" onmouseover="upDate(this)" onmouseleave="undo()">
+          <figcaption>Red battle mecha</figcaption>
+        </figure>
+        <figure onfocus="upDate(this)" onblur="undo()">
+          <img src="images/robot-6.jpg" alt="Ornate gold and black futuristic robot helmet with sharp layered panels and glowing highlights" onmouseover="upDate(this)" onmouseleave="undo()">
+          <figcaption>Golden mechanical guardian</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+  <footer><p>Robot Gallery — an accessible interactive image showcase.</p></footer>
+</body>
+</html>
